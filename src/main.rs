@@ -9,7 +9,7 @@ fn main() -> Result<()> {
     let args: Vec<String> = env::args().collect();
 
     // dump these args to a file so we can see what they are
-    let mut file = File::create("args.txt")?;
+    let mut file = File::create("c:\\temp\\args.txt")?;
 
     for x in &args {
         let y = format!("{}{}", x, "\n");
