@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+# pass --release to create a release
+cargo build $1
