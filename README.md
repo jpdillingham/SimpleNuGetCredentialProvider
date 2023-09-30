@@ -6,6 +6,10 @@ A simple NuGet credential provider that stores credentials in your operating sys
 
 I had a need to retrieve packages from a private NuGet repository and I couldn't figure out how to configure my credentials without installing a bunch of Visual Studio- or repository-specific dependencies, and that seemed kind of ridiculous to me.
 
+Also, some of my repositories contain a NuGet.config, so credentials saved in my personal NuGet.config can't be applied.  The fact that NuGet can't source credentials from multiple NuGet.config files seems a bit ridiculous to me as well.
+
+This is mostly a self-inflicted problem caused by stubbornness.
+
 # How can I install it?
 
 Download the binary for your operating system from the [Releases](https://github.com/jpdillingham/SimpleNuGetCredentialProvider/releases).
