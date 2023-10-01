@@ -12,11 +12,13 @@ This is mostly a self-inflicted problem caused by stubbornness.
 
 # How can I install it?
 
-Download the binary for your operating system from the [Releases](https://github.com/jpdillingham/SimpleNuGetCredentialProvider/releases).
+Clone the repo and build it yourself with the included build script (you'll need Rust installed).
 
 ## Windows
 
 Unzip the binary to `%localappdata%\NuGet\CredentialProviders`
+
+Note: this method is apparently deprecated, and when using NuGet from the command line you'll get a warning about this.
 
 ## Linux or macOS
 
@@ -35,13 +37,17 @@ Under 'Generic Credentials' click 'Add a generic credential'
 In the 'Internet or network address' input, add the following:
 
 ```
-NuGet:https://<your_server>/index.json
+Simple.NuGet:https://<your_server>/index.json
 ```
 
-The string must be prefixed with `NuGet:`, and the URL must be the exact URL that NuGet uses to access your packages.  For example, to access a NuGet feed hosted by GitHub, you'd enter:
+The string must be prefixed with `Simple.NuGet:`, and the URL must be the exact URL that NuGet uses to access your packages.  For example, to access a NuGet feed hosted by GitHub, you'd enter:
 
 ```
-NuGet:https://nuget.pkg.github.com/<my_organization>/index.json
+Simple.NuGet:https://nuget.pkg.github.com/<my_organization>/index.json
 ```
 
-Enter your username and password, then click Ok to save.
+Enter the username "Simple" and in the password field enter your username and password separated by a colon, e.g `<my username>:<my password>`, then click Ok to save.
+
+## Linux or macOS
+
+Not sure, didn't test.
